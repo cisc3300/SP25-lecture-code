@@ -11,23 +11,23 @@
                 display: flex;
 
                 /* flex direction row is horizontal left to right*/
-                /*flex-direction: row;*/
+                flex-direction: row;
 
                 /* flex direction column is vertical left to right*/
-                flex-direction: column;
+                /*flex-direction: column;*/
 
                 /*flex wrap */
-                /*flex-wrap: wrap;*/
-                /*width: 700px;*/
+                flex-wrap: wrap;
+                /*width: 500px;*/
 
                 /*justify content - aligns items on the main axis*/
-                /*justify-content: center;*/
+                justify-content: center;
 
                 /*align items - aligns items on the cross axis  */
                 align-items: center;
 
                 /*align content - only works with flex wrap - aligns wrapped items on the cross axis*/
-                /*align-content: flex-end;*/
+                align-content: flex-end;
 
                 /*width: 600px;*/
 
@@ -44,11 +44,12 @@
                 /* orders flex children*/
             }
 
-            /*#first-flex-item {*/
-            /*    display: flex;*/
-            /*    align-items: center;*/
-            /*    flex-direction: column;*/
-            /*}*/
+            #first-flex-item {
+                order: 3;
+                /*display: flex;*/
+                /*align-items: center;*/
+                /*flex-direction: column;*/
+            }
 
 
         </style>
@@ -58,12 +59,7 @@
     <body>
 
         <div class="flex-container">
-            <div id="first-flex-item" class="flex-item">
-<!--                <div>1</div>-->
-<!--                <div>2</div>-->
-<!--                <div>3</div>-->
-                div1
-            </div>
+            <div id="first-flex-item" class="flex-item">div1</div>
             <div class="flex-item">div2</div>
             <div class="flex-item">div3</div>
 <!--            <div class="flex-item">div3</div>-->
