@@ -4,6 +4,58 @@
         <title>CSS</title>
         <link href="css-file.css" type="text/css"
               rel="stylesheet"/>
+
+        <style>
+
+            /* some different selector types */
+
+
+            /* universal */
+            * {
+                font-size: 16px;
+                color: red;
+            }
+
+            /* type */
+            p {
+                color: cyan;
+            }
+
+            /* class  */
+
+            .plants {
+                color: green;
+            }
+
+            /* id */
+            #plants-id {
+                color: blue;
+            }
+
+
+            /* child */
+            li > a {
+                color: pink;
+            }
+
+            /* descendant */
+
+            li p {
+                color: purple;
+            }
+
+            /*    adjacent sibling*/
+            h1 + p {
+                color: brown;
+            }
+
+            /*    general sibling*/
+            h2 ~ span {
+                color: aqua;
+            }
+
+
+        </style>
     </head>
     <body>
 
@@ -21,7 +73,7 @@
         </p>
 
         <!-- id -->
-        <p id="plants-id">
+        <p id="plants-id" class="plants">
             element id
         </p>
 
@@ -52,55 +104,5 @@
 </html>
 
 
-<style>
 
-    /* some different selector types */
-
-
-    /* universal */
-    * {
-        font-size: 16px;
-        color: red;
-    }
-
-    /* type */
-    p {
-        color: cyan;
-    }
-
-    /* class  */
-
-    .plants {
-        color: green;
-    }
-
-    /* id */
-    #plants-id {
-        color: blue;
-    }
-
-
-    /* child */
-    li > a {
-        color: pink;
-    }
-
-    /* descendant */
-
-    li p {
-        color: purple;
-    }
-
-    /*    adjacent sibling*/
-    h1 + p {
-        color: brown;
-    }
-
-    /*    general sibling*/
-    h2 ~ span {
-        color: aqua;
-    }
-
-
-</style>
 
