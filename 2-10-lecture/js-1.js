@@ -1,33 +1,31 @@
-console.log(1 + '4')
-
-console.log(Number(true))
-console.log(Number(false))
-
-
 
 //This file will be run step by step
 
 // dynamic typing
 
 // variable a is assigned to a string
-let a = "hello";
-console.log(typeof a);
-
-// variable a is assigned to an integer
-a = 5
-console.log(typeof a)
-
-
-// weak typing
-// tries to convert types, this is common in interpreted languages, typing is less strict
-console.log(1 + '7'); // => '17'
-
-const output = 1 + '7'
-console.log(typeof output)
+// let a = "hello";
+// console.log(typeof a);
+//
+// // variable a is assigned to an integer
+// a = 5
+// console.log(typeof a)
+//
+//
+// // weak typing
+// // tries to convert types, this is common in interpreted languages, typing is less strict
+// console.log(1 + '7'); // => '17'
+//
+// const output = 1 + '7'
+// console.log(typeof output)
 
 //type juggling
 
-// if ("test") {
+// if ("0") {
+//     console.log("is true")
+// } else {
+//     console.log("is false")
+// }
 // if ("0") {
 // if (0) {
 // if ("") {
@@ -36,23 +34,23 @@ console.log(typeof output)
 //     console.log("is false")
 // }
 
-// statement
-const name = 'nate';
-
-//block
-if (name) {
-    console.log(name)
-}
+// // statement
+// const name = 'nate';
+//
+// //block
+// if (name) {
+//     console.log(name)
+// }
 
 //variables and scope
 if (true) {
-    var blockVar = 'test'
-    const blockConst = 'test2'
-    let blockLet = 'test3'
+    var blockVar = 'test';
+    const blockConst = 'test2';
+    let blockLet = 'test3';
 }
-console.log(blockVar)
-console.log(blockConst)
-console.log(blockLet)
+// console.log(blockVar);
+// console.log(blockConst)
+// console.log(blockLet)
 
 //template literals
 const string1 = 'yo'
@@ -98,13 +96,13 @@ if ('1' === 1) {
 //comparison operator
 
 //!= == not equal and equal
-if (1 == 1) {
-    console.log('true');
-}
+// if (1 == 1) {
+//     console.log('true');
+// }
 
 //!== === strict not equal and equal, checks type
-if (1 == '1') {
-    console.log('true');
+if (1 === '1') {
+    console.log('true 1');
 }
 
 if (1 === '1') {

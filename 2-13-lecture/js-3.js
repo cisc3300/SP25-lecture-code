@@ -92,7 +92,9 @@ const cat = {
     }
 }
 
+//dot notation
 console.log(cat.name)
+//bracket notation
 console.log(cat['name'])
 
 cat.name = 'peaches'
@@ -101,14 +103,9 @@ console.log(cat.name)
 delete cat.name
 console.log(cat)
 
-//The this keyword, is basic off the current context in which it was invoked
+//The this keyword, is based off the current context in which it was invoked
 console.log(this)
 console.log(cat.meow())
-
-//arrays are objects
-const array1 = [1, 2, 3]
-array1[3] = 'yo'
-console.log(array1)
 
 
 //global objects/built ins
