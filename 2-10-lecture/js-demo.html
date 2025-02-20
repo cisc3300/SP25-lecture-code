@@ -26,7 +26,7 @@
         </div>
 
         <script>
-            $( document ).ready(function() {
+            $(document).ready(function() {
 
                 $("#color-change").click(function(){
                     const colorArray = [
@@ -55,10 +55,9 @@
                         console.log(data)
                         if (data.id) {
                             $("#random-pokemon").html(`
-              <div>${data.name}</div>
-              <img src="${data.sprites.front_default}" />
-            `);
-
+                                <div>${data.name}</div>
+                                <img src="${data.sprites.front_default}" />
+                            `);
                         }
 
                     });

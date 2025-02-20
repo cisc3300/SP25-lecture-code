@@ -5,18 +5,29 @@ function isEven(num) {
     return num % 2 === 0;
 }
 
+// console.log(isEven(3))
+
 // Function Expression
 const consoleAdd = function (a, b) {
     console.log(a + b);
 }
 
-// arrow functions (do not make a binding to the this keyword, maybe don't use as methods in objects)
-let add = (a, b) => a + b;
+// consoleAdd(1, 2)
+
+// arrow functions (do not make a binding to the this keyword, maybe don't use as methods in objects
+// they also automatically return the output)
+    // let add = (a, b) => a + b;
+// console.log(add(3,4))
 // let add = function (a, b) {
 //   return a + b;
 // }
 
-add(1,3)
+//notice if we use a curly block we need to return a value
+// let add = (a, b) => {
+//   return a + b;
+// }
+
+// add(1,3)
 
 //Function types
 
@@ -32,7 +43,7 @@ function addSubtract(add, subtract, a, b) {
     const subtracted = subtract(a, b)
     return [added, subtracted]
 }
-console.log(addSubtract(add, subtract, 1, 2))
+// console.log(addSubtract(add, subtract, 1, 2))
 
 
 function doSomething(callback) {
@@ -40,7 +51,7 @@ function doSomething(callback) {
 }
 
 //An anonymous function is a function without a name
-doSomething(() => console.log('hey'))
+// doSomething(() => console.log('hey'))
 
 
 //OBJECTS
@@ -55,7 +66,7 @@ const cat = {
         console.log('meow')
     }
 }
-cat.meow();
+// cat.meow();
 
 //The new keyword and the object constructor creates a blank object.
 const dog = new Object();
@@ -66,9 +77,10 @@ function Fish (name, age) {
     this.name = name
     this.age = age
 }
+// console.log(fish.age)
 
 const fish = new Fish('nemo', 8)
-console.log(fish)
+// console.log(fish.age)
 
 //new from es6: You can use the keyword class to create a class.
 //You must add a method named constructor():
@@ -81,11 +93,11 @@ class Car {
 
 //Javascript is different from other OOP languages in that using a class to create objects is optional/Syntactic sugar
 const chevy = new Car('chevy', 2014)
-console.log(chevy)
+// console.log(chevy)
 
 
 //accessing, updating, removing properties
-const cat = {
+const cat2 = {
     name: 'pinecone',
     meow: function () {
         console.log(this)
@@ -98,14 +110,14 @@ console.log(cat.name)
 console.log(cat['name'])
 
 cat.name = 'peaches'
-console.log(cat.name)
+// console.log(cat.name)
 
 delete cat.name
-console.log(cat)
+// console.log(cat)
 
 //The this keyword, is based off the current context in which it was invoked
-console.log(this)
-console.log(cat.meow())
+// console.log(this)
+// console.log(cat.meow())
 
 
 //global objects/built ins
@@ -113,13 +125,13 @@ console.log(cat.meow())
 //built in string
 //how this works: property accessor (the dot in this case) temporarily converts the primitive value to an object
 const stringVariable = "test"
-console.log(stringVariable.toUpperCase());
+// console.log(stringVariable.toUpperCase());
 
 const numberVariable = 1
-console.log(numberVariable.toPrecision(4))
+// console.log(numberVariable.toPrecision(4))
 
 //global object used as a static class
-console.log(Math.random())
+// console.log(Math.random())
 
 //global object that can be instantiated to an object
 const rightNow = new Date()

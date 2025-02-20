@@ -22,6 +22,7 @@ switch(yo) {
 
 //ternary
 const ternaryValue = 1 > 2 ? 'true' : 'false';
+console.log("ternaryValue")
 console.log(ternaryValue)
 
 
@@ -30,6 +31,7 @@ console.log(ternaryValue)
 const firstValue = 'first value'
 const shortCircuit = (firstValue || nothing)
 
+console.log("shortCircuit")
 console.log(shortCircuit)
 
 

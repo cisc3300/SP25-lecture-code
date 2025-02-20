@@ -44,8 +44,8 @@
 
             //2. dom event handlers
             function domEventHandlerReact(e) {
-                console.log(e)
-                console.log('clicked 2!')
+                console.log(e.target)
+                // console.log('clicked 2!')
             }
             document.getElementById('dom-event-handler').onclick = domEventHandlerReact
 
@@ -54,10 +54,11 @@
                 //when a click event happens, call this function, will automatically pass the event
 
                 //this keyword -> we are in the context of the node object
-                console.log(this)
+                this.setAttribute('style', 'color: red')
 
                 //event object
                 console.log(e)
+                console.log(e.target)
             });
 
             // window.addEventListener('load', function (e) {

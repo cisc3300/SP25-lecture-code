@@ -54,7 +54,7 @@
 
             //by class name - return html collection
             const listItems = document.getElementsByClassName('list-item')
-            // console.log(listItems)
+            // console.log(listItems[0])
 
             //by tag name
             // const listItems = document.getElementsByTagName('li')
@@ -65,16 +65,17 @@
             //with a css like selector -
             // const nodeList = document.querySelectorAll('li.list-item')
             // console.log("nodeList")
+            // console.log(nodeList)
             // console.log(nodeList[0].innerHTML = '<div>yo</div>')
 
 
             //3. loop through a node list
-            console.log(listItems.item(0))
+            // console.log(listItems.item(0))
             // console.log(listItems[0])
-            for (let i = 0; i < listItems.length; i++) {
-                console.log(listItems[i])
-                listItems[i].textContent = 'hey'
-            }
+            // for (let i = 0; i < listItems.length; i++) {
+            //     console.log(listItems[i])
+            //     // listItems[i].textContent = 'hey'
+            // }
 
 
             //4. traverse between
@@ -83,7 +84,7 @@
             //previous/next sibling
             //first, lastChild
 
-            // const unorderedList = document.getElementById('ul')
+            const unorderedList = document.getElementById('ul')
             // const firstListItem = document.getElementById('first-list-item')
             // console.log("traverse")
             // console.log(unorderedList.parentNode)
@@ -93,20 +94,23 @@
 
 
             //5. change text value
-            // const secondDiv = document.getElementById('second-div');
+            const secondDiv = document.getElementById('second-div');
+
+            //access text
+            // console.log(secondDiv.innerText)
 
             //overwrites
             // secondDiv.textContent = 'yo'
 
             //need to be specific if multiple siblings are at play
             //whitespace nodes
-            // secondDiv.firstChild.nextSibling.textContent = 'update'
+            secondDiv.firstChild.nextSibling.textContent = 'update'
 
 
             //6. change html values
 
             //inner html - overwrites again
-            // secondDiv.innerHTML = 'sc'
+            secondDiv.innerHTML = `<script>console.log('hi')<\/script>`
 
             // const newDiv = document.createElement('div');
             // const newDivTextContent = document.createTextNode('new text')
@@ -122,8 +126,8 @@
             //8. access and update attributes
             // const firstDivClass = document.getElementById('first-div').getAttribute('class');
             // console.log(firstDivClass);
-            // const firstDivClass = document.getElementById('first-div');
-            // firstDivClass.setAttribute('style', 'color: red')
+            const firstDivClass = document.getElementById('first-div');
+            firstDivClass.setAttribute('style', 'color: red')
 
         </script>
 
