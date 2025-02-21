@@ -81,6 +81,7 @@
                     dataType: "json",
                     success: function (data) {
                         // the $. ajax() method will automatically parse the JSON string and turn it into a JavaScript object for you.
+                        // console.log(data)
                         if (data.id) {
                             $("#random-pokemon").html(`
                                 <div class="pokemon-name">${data.name}</div>

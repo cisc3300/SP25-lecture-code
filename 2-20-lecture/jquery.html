@@ -39,15 +39,16 @@
             // const divOne = jQuery('#div-1');
             // console.log(divOne)
             const shortHand = $('#div-1')
-            console.log(shortHand);
+            // console.log(shortHand);
             //different selectors
 
             //basic selectors - css style, by class, by id
             // const byId = $('#div-1')
-            // const byClass = $('.class-div')
+            const byClass = $('.class-div')
+            // console.log(byClass);
 
             //hierarchy - parent and child
-            // const subDiv = $('.class-div > .sub-class');
+            const subDiv = $('.class-div > .sub-class');
             // console.log(subDiv)
 
             //basic filters - first element of type
@@ -61,7 +62,7 @@
             //visibility filter - grab all visible
             // const notHidden = $(":visible")
 
-            //child filters - first contained element of div 1
+            //child filters - first contained element of id of  div 1
             // const firstChild = $('#div-1:first-child')
             // console.log(firstChild)
 
@@ -72,7 +73,7 @@
             //doing things with selected elements
 
 
-            //get element data with html()
+            //get element html content with html()
             const second = $('#div-2')
             // console.log(second.html());
 
@@ -82,7 +83,8 @@
             //
 
             //setting element data, .html and .text can get or set if given a value or not
-            // second.html('updated');
+            // second.html('<span>hey</span>');
+            // console.log(second.html());
             // $('#div-1').text('text update');
 
 
@@ -90,10 +92,10 @@
             // $('li').text('mass update');
 
             //unless you want to
-            $("li").each(function (index) {
-              // can select in a callback with this, this = the element
-              $(this).text(`${index}`);
-            });
+            // $("li").each(function (index) {
+            //   // can select in a callback with this, this = the element
+            //   $(this).text(`${index}`);
+            // });
 
             //chaining - do one thing then another
             // $('#div-2').hide().delay(1000).fadeIn(2000);
@@ -102,6 +104,7 @@
 
             //document ready - our webpage is loaded and ready to do things
             // - useful if we need to wait for data before making calls
+
             $(document).ready(function () {
                 console.log('ready!')
             })
@@ -115,10 +118,10 @@
             // $('#div-1').after('<p>after</p>');
 
             //prepend, insert into an element right after the opening tag
-            // $('#div-1').prepend('<p>prepend</p>');
+            $('#div-1').prepend('<p>prepend</p>');
 
             //append, insert into an element right before the closing tag
-            // $('#div-1').append('<p>append</p>');
+            $('#div-1').append('<p>append</p>');
 
 
             //attribute values
@@ -138,19 +141,20 @@
 
 
             //events - .on function and then the name of the event you want to handle
-            $('li').on('click', function (e) {
-                $(this).css("color", "red")
-            })
+            // $('li').on('click', function (e) {
+            //     $(this).css("color", "red")
+            // })
 
             //effects
-            // const li = $('li')
+
             // $('li').on('click', function () {
             //   $(this).fadeOut(700);
             // });
 
             //traversing the dom
-            // const parent = $('li').parent();
-            // console.log(parent)
+            const li = $('li')
+            const parent = $('li').parent();
+            console.log(parent)
 
 
             //form

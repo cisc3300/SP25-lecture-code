@@ -16,17 +16,17 @@
         <script>
             $('#ajax-get').on('click', function () {
                 $.ajax({
-                    url: 'http://localhost:8888',
+                    url: 'http://localhost:8888/cats',
                     type: "GET",
                     dataType: "json",
                     success: function (data) {
                         // the $. ajax() method will automatically parse the JSON and turn it into a JavaScript object for you.
                         console.log(data);
-
-                        $.each(data, function (key, value) {
+                        $.each(data, function (index, value) {
+                          console.log(index)
                           console.log(value)
                             $('#cats-container').append(`
-                              <div class="user">${value['name']}</div>
+                              <div>${value['name']}</div>
                             `)
                         })
                     }
