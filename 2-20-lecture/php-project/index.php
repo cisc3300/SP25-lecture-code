@@ -1,5 +1,4 @@
 <?php
-
 //we need this to accept requests from any domain
 header("Access-Control-Allow-Origin: *");
 
