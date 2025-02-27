@@ -32,15 +32,19 @@
 //
 //
 ////array_map
-//function myFunction($v)
-//{
-//    return($v*$v);
-//}
+function myFunction($v) {
+    return($v*$v);
+}
+
+function isEven($number) {
+    return $number % 2;
+}
 //
-//$a=array(1,2,3,4,5);
-//$mapped = array_map("myFunction",$a);
-////var_dump($mapped);
-//
+$a = [1,2,3,4,5];
+$mapped = array_map("myFunction",$a);
+var_dump($mapped);
+$filtered = array_filter($a, "isEven");
+var_dump($filtered);
 ////keys and values
 $products = [
     'Toffee' => 2.99,

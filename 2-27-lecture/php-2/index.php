@@ -4,6 +4,7 @@
 
 
 //include require
-require 'required2.php';
 require 'required1.php';
-//echo $required1;
+require 'required2.php';
+
+include 'includeMe.html';

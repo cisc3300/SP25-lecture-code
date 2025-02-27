@@ -22,7 +22,11 @@ echo '<br>';
 
 //ternary
 
-$ternaryOperator = (1 < 2) ? 'true' : 'false';
+$ternaryOperator = (1 < 2) ? true : false;
+
+//ternary shorthand, foo = bar ? bar : baz;
+
+$ternaryOperator2 = (1 < 2) ?: false;
 
 //if elseif
 

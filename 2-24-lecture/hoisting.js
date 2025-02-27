@@ -1,8 +1,8 @@
 //Before the interpreter executes the whole code, it first hoists (raises, or lifts) the declared function to the top of the scope it is defined in.
 
-printHello()
-// // hello
-//
+// printHello()
+// // // hello
+// //
 // function printHello() {
 //   console.log("hello")
 // }
@@ -10,9 +10,9 @@ printHello()
 
 //but only in the function scope
 // printHello()
-//
-// printPinecone()
 // //
+// printPinecone()
+// // //
 // function printHello() {
 //   console.log('hello')
 //   printPinecone()
@@ -23,19 +23,19 @@ printHello()
 // }
 
 
-//variables too
-console.log(name)
-//
-const name = "Pinecone"
+// //variables too
+// console.log(name)
+// // //
+// const name = "Pinecone"
 
 
 //function scope only
 print()
 console.log(name)
 
-function print() {
-  console.log(name)
-  // undefined but created
-
-  const name = "Pinecone"
-}
+// function print() {
+//   console.log(name)
+//   // undefined but created
+//
+//   const name = "Pinecone"
+// }

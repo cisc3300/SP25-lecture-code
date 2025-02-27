@@ -4,16 +4,16 @@
 //     console.log('calling from stack1')
 //     stack2()
 // }
-// //
+// // //
 // function stack2() {
-//     // throw new Error('broken')
+//     throw new Error('broken')
 //     console.log('calling from stack2')
 // }
-// //
+// // //
 // console.log("console 1")
-// //
+// // //
 // stack1();
-// //
+// // //
 // console.log("console 2")
 
 
