@@ -2,33 +2,33 @@
 
 
 ////while
-////$i = 1;
-////while ($i < 6) {
-////    echo $i;
-////    $i++;
-////}
+$i = 1;
+while ($i < 6) {
+    echo $i;
+    $i++;
+}
 //
 //
 ////do while
-////$i = 1;
-////do {
-////    echo $i;
-////    $i++;
-////} while ($i < 6);
+$i = 1;
+do {
+    echo $i;
+    $i++;
+} while ($i < 6);
 //
 //
 ////for
-//for ($x = 0; $x <= 10; $x++) {
-//    echo "The number is: $x <br>";
-//}
+for ($x = 0; $x <= 10; $x++) {
+    echo "The number is: $x <br>";
+}
 //
 //
 ////foreach
-//$colors = array("red", "green", "blue", "yellow");
+$colors = array("red", "green", "blue", "yellow");
 ////
-//foreach ($colors as $x) {
-//    echo "$x <br>";
-//}
+foreach ($colors as $x) {
+    echo "$x <br>";
+}
 //
 //
 ////array_map
@@ -53,8 +53,8 @@ $products = [
 ];
 
 //key => value
-foreach ($products as $item => $price) {
-    echo "{$item}: {$price}";
+foreach ($products as $key => $value) {
+    echo "{$key}: {$value}";
     echo '<br>';
 }
 

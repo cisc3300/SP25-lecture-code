@@ -4,11 +4,12 @@
 $test = 'cat';
 $concat = $test . ' test2';
 
-echo $concat;
-echo '<br>';
+//echo $concat;
+//echo '<br>';
 
-echo $test .= ' test 3';
-echo '<br>';
+//echo $test .= ' test 3';
+//echo $test;
+//echo '<br>';
 
 //template literal
 

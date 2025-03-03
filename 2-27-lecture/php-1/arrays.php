@@ -11,6 +11,7 @@
       'key2' => 2,
     ];
 //
+var_dump($associativeArray);
     $associativeArray['key1'] = 'key3';
 //    echo '<br>';
 //    var_dump($indexArray);

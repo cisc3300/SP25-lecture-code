@@ -93,4 +93,4 @@ function calculateWhatever3($price, $quantity, $total) {
     return $price * $quantity * $total;
 }
 //
-//$output2 = calculateWhatever3(total: 1, quantity: 2, price: 3);
+$output2 = calculateWhatever3(total: 1, quantity: 2, price: 3);

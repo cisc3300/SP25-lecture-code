@@ -54,7 +54,6 @@ $ternaryOperator2 = (1 < 2) ?: false;
 //match
 
 $food = 'cake';
-
 $return_value = match ($food) {
     'apple' => 'This food is an apple',
     'bar' => 'This food is a bar',
