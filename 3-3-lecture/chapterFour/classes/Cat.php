@@ -1,8 +1,7 @@
 <?php
 
 namespace chapterFour\classes;
-class Cat
-{
+class Cat {
     public string $name;
     public int $age;
     protected string $protectedString;

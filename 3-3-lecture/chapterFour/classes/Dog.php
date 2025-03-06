@@ -1,6 +1,7 @@
 <?php
 
 namespace chapterFour\classes;
+
 class Dog {
 
     //properties, with member visibility
@@ -19,5 +20,9 @@ class Dog {
     }
 
 
+    public function getName()
+    {
+        return $this->name;
+    }
 
 }

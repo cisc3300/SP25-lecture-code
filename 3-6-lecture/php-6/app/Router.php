@@ -25,6 +25,11 @@ class Router {
             $userController->getUsers();
         }
 
+        if ($uriArray[1] === 'api' && $uriArray[2] === 'users' && $_SERVER['REQUEST_METHOD'] === 'POST') {
+            $userController = new UserController();
+            $userController->saveUser();
+        }
+
         if ($uriArray[1] === 'users-add' && $_SERVER['REQUEST_METHOD'] === 'GET') {
             $userController = new UserController();
             $userController->viewAddUsers();

@@ -26,8 +26,10 @@
                     $.ajax({
                         url: url,
                         type: "GET",
+                        dataType: "json",
                         success: function (data) {
                             $('#users-container').html('')
+                            console.log(data)
                             $.each( data, function( key, value ) {
                                 $('#users-container').append(`
                                    <p>${value['id']} ${value['name']}</p> `)

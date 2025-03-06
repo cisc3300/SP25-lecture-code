@@ -14,22 +14,21 @@ class UserController
         ];
         $userModel = new User();
         $users = $userModel->getAllUsersByName($params);
-        header("Content-Type: application/json");
         echo json_encode($users);
         exit();
     }
 
     public function saveUser() {
         //get post data from our form post
-        $name = $_POST['name'] ? $_POST['name'] : null;
-        $age = $_POST['age'] ? $_POST['age'] : null;
-        $email = $_POST['email'] ? $_POST['email'] : null;
+        $name = $_POST['name'] ?? null;
+        $age = $_POST['age'] ?? null;
+        $email = $_POST['email'] ?? null;
         $errors = [];
 
         //validate and sanitize name
         if ($name) {
             //sanitize, htmlspecialchars replaces html reserved characters with their entity numbers
-            //meaning they can't be run as code
+            //meaning they can't be run as code, this will stop an xxs attack
             $name = htmlspecialchars($name);
 
 //            echo ($name);

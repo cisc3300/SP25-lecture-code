@@ -5,6 +5,6 @@ namespace chapterFour\inheritance;
 abstract class Car {
 
     public function drive() {
-        echo "vroom";
+        echo "parent method being called";
     }
 }

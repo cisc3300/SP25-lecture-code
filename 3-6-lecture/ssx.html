@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>jQuery</title>
+
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    </head>
+    <body>
+
+        <div id="div-1">
+            div 1
+        </div>
+
+
+
+
+        <script>
+            $('#div-1').on('click', function (e) {
+                const scriptString = "<script>alert(\"Imagine that I am a keylogger script\");<\/script>";
+                $('body').append(scriptString);
+            })
+        </script>
+
+    </body>
+</html>

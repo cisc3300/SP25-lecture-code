@@ -1,5 +1,7 @@
 <?php
 
+require 'builtInFunctions.php';
+
 //echo $_SERVER["REQUEST_URI"];
 //echo $_SERVER["REQUEST_METHOD"];
 
@@ -7,8 +9,8 @@
 
 //var_dump($uriArray);
 
-header("Content-Type: application/json");
-
-echo json_encode([
-    'name' => 'pinecone'
-]);
+//header("Content-Type: application/json");
+//
+//echo json_encode([
+//    'name' => 'pinecone'
+//]);
