@@ -4,24 +4,24 @@
 $name = 'Pinecone';
 
 //lower case
-echo strtolower($name);
-echo '<br>';
-
-//upper case
-echo strtoupper($name);
-echo '<br>';
-
-//string length
-echo strlen($name);
-echo '<br>';
-
-//finding the position of characters in a string
-echo strpos($name, 'cone');
-echo '<br>';
-
-//replacing a string in a string
-echo str_replace('cone', 'test', $name);
-echo '<br>';
+//echo strtolower($name);
+//echo '<br>';
+//
+////upper case
+//echo strtoupper($name);
+//echo '<br>';
+//
+////string length
+//echo strlen($name);
+//echo '<br>';
+//
+////finding the position of characters in a string
+//echo strpos($name, 'cone');
+//echo '<br>';
+//
+////replacing a string in a string
+//echo str_replace('cone', 'test', $name);
+//echo '<br>';
 
 //replacing a string in a string with a regular expression
 
@@ -31,14 +31,14 @@ echo '<br>';
 // A regular expression can be a single character, or a more complicated pattern
 
 //here we are replacing any capitals with V
-echo preg_replace('/[A-Z]/','V', $name);
+//echo preg_replace('/[A-Z]/','V', $name);
 echo '<br>';
 
 //explode returns an array of strings, each of which
 // is a substring of string formed by splitting it on
 // boundaries formed by the string separator.
-$exampleURI = '/users/1';
-var_dump(explode("/", $exampleURI));
+//$exampleURI = '/users/1';
+//var_dump(explode("/", $exampleURI));
 //$exampleURI will be ["", "users", "1"]
 //echo '<br>';
 
@@ -46,11 +46,11 @@ var_dump(explode("/", $exampleURI));
 //echo sqrt(9);
 
 //arrays
-//$array = ['pinecone', 'nathan'];
+$array = ['pinecone', 'nathan'];
 //echo in_array('pinecone', $array);
 
 //array mutate
-//array_push($array, 'pinecone2');
+array_push($array, 'pinecone2');
 //var_dump($array);
 
 //sorting

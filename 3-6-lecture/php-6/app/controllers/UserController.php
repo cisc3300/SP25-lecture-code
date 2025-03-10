@@ -10,6 +10,7 @@ class UserController
 {
     public function getUsers() {
         $params = [
+            //pincone
             'name' => $_GET['name'] ?? null,
         ];
         $userModel = new User();
@@ -20,6 +21,7 @@ class UserController
 
     public function saveUser() {
         //get post data from our form post
+        //{name: 'pinecone', age: '14'}
         $name = $_POST['name'] ?? null;
         $age = $_POST['age'] ?? null;
         $email = $_POST['email'] ?? null;
@@ -31,8 +33,9 @@ class UserController
             //meaning they can't be run as code, this will stop an xxs attack
             $name = htmlspecialchars($name);
 
-//            echo ($name);
-//            echo htmlspecialchars(htmlspecialchars($name));
+            echo ($name);
+            echo '<br>';
+            echo htmlspecialchars(htmlspecialchars($name));
 
             //validate text length
             if (strlen($name) < 2) {

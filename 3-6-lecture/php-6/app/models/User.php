@@ -15,10 +15,10 @@ class User {
                 'id' => '2',
                 'name' => 'nathan'
             ],
-            [
-                'id' => '3',
-                'name' => "<script>alert('imagine i am doing something malicious')</script>"
-            ],
+//            [
+//                'id' => '3',
+//                'name' => "<script>alert('imagine i am doing something malicious')</script>"
+//            ],
         ];
 
         if (!empty($params['name'])) {

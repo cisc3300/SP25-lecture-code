@@ -1,9 +1,9 @@
 <?php
 
-require 'builtInFunctions.php';
+//require 'builtInFunctions.php';
 
-//echo $_SERVER["REQUEST_URI"];
-//echo $_SERVER["REQUEST_METHOD"];
+echo $_SERVER["REQUEST_URI"];
+echo $_SERVER["REQUEST_METHOD"];
 
 //$uriArray = explode("/", $_SERVER["REQUEST_URI"]);
 
