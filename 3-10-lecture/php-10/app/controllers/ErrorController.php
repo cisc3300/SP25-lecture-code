@@ -25,20 +25,20 @@ class ErrorController {
     }
     public function viewErrors() {
 //        $this->badFunction();
-        $this->warningFunction();
+//        $this->warningFunction();
         try {
 //        echo 'Find an error";
 //            $this->badFunction();
-            if (true) {
+//            if (true) {
 //                throw new Exception('Custom error message!');
-            }
-        } catch (Error $e) {
-            echo 'Caught error';
+//            }
+        } catch (Error $error) {
+            echo $error;
         }
 
         //set a custom function for errors
-//        set_error_handler("app\controllers\myErrorHandler");
-//        trigger_error('');
+        set_error_handler("app\controllers\myErrorHandler");
+        trigger_error('');
 
     }
 }

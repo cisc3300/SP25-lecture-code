@@ -23,6 +23,7 @@ class AuthController extends Controller
             'password' => $_POST['password'] ?? null,
         ];
 
+        //this will be updated when we learn SQL
         if ($_POST['email'] !== 'test@test.com' ||
             $_POST['password'] !== 'test') {
             http_response_code(400);
