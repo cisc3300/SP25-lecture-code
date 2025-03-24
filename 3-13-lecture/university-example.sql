@@ -18,8 +18,8 @@ CREATE TABLE `classes`
     primary key (`id`)
 );
 
--- ALTER TABLE students ADD Email varchar(255);
--- ALTER TABLE students DROP COLUMN Email;
+-- ALTER TABLE students ADD Email varchar(255) NOT NULL;
+ALTER TABLE students DROP COLUMN Email;
 
 -- seed some test data
 insert into students (firstName, lastName)
@@ -49,19 +49,19 @@ select * from students where id = 1 and firstName = 'Bethany';
 select * from students where id = 999 or firstName = 'Bethany';
 
 -- select all from students where name contains Shaw;
-select * from students where name like '%Shaw%';
+select * from students where firstName like '%Shaw%';
 
 -- select all from students order by name, order by name descending(last to first)
-select * from students order by name;
-select * from students order by name desc;
+select * from students order by firstName;
+select * from students order by firstName desc;
 
 -- limit and offset
-select * from students limit 2;
-select * from students limit 2 offset 2;
+select * from students limit 1;
+select * from students limit 1 offset 1;
 
 -- update
-update student SET firstName = 'pinecone' where id = 1;
+update students SET firstName = 'pinecone' where id = 1;
 
 -- delete
 
-delete student where id = 1;
+delete from student where id = 1;
