@@ -32,51 +32,23 @@ if ($uriArray[1] === 'api' && $uriArray[2] === 'users' && $_SERVER['REQUEST_METH
     if ($id) {
         $userController->getUserByID($id);
     } else {
-        $userController->getAllUsers();
+        $userController->getUsers();
     }
 }
 
-//save user
-if ($uriArray[1] === 'api' && $uriArray[2] === 'users' && $_SERVER['REQUEST_METHOD'] === 'POST') {
-    $userController = new UserController();
-    $userController->saveUser();
-}
-
-//update user
-if ($uriArray[1] === 'api' && $uriArray[2] === 'users' && $_SERVER['REQUEST_METHOD'] === 'PUT') {
-    $userController = new UserController();
-    $id = isset($uriArray[3]) ? intval($uriArray[3]) : null;
-    $userController->updateUser($id);
-}
-
-//delete user
-if ($uriArray[1] === 'api' && $uriArray[2] === 'users' && $_SERVER['REQUEST_METHOD'] === 'DELETE') {
-    $userController = new UserController();
-    $id = isset($uriArray[3]) ? intval($uriArray[3]) : null;
-    $userController->deleteUser($id);
-}
 
 //views
 
-
-if ($uri === '/users-add' && $_SERVER['REQUEST_METHOD'] === 'GET') {
+if ($uriArray[1] === 'users' && $_SERVER['REQUEST_METHOD'] === 'GET') {
+    $id = isset($uriArray[2]) ? intval($uriArray[2]) : null;
     $userController = new UserController();
-    $userController->usersAddView();
-}
 
-if ($uriArray[1] === 'users-update' && $_SERVER['REQUEST_METHOD'] === 'GET') {
-    $userController = new UserController();
-    $userController->usersUpdateView();
-}
+    if ($id) {
+        $userController->userDetailsView();
+    } else {
+        $userController->usersView();
+    }
 
-if ($uriArray[1] === 'users-delete' && $_SERVER['REQUEST_METHOD'] === 'GET') {
-    $userController = new UserController();
-    $userController->usersDeleteView();
-}
-
-if ($uriArray[1] === '' && $_SERVER['REQUEST_METHOD'] === 'GET') {
-    $userController = new UserController();
-    $userController->usersView();
 }
 
 include '../public/assets/views/notFound.html';

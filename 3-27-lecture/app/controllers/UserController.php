@@ -6,10 +6,11 @@ use app\models\User;
 
 class UserController
 {
-    public function getAllUsers() {
+    public function getUsers() {
         $userModel = new User();
         header("Content-Type: application/json");
-        $users = $userModel->getAllUsers();
+        $query = !empty($_GET['name']) ? $_GET['name'] : null;
+        $users = $userModel->getUsers($query);
 
         echo json_encode($users);
         exit();
@@ -24,7 +25,12 @@ class UserController
     }
 
     public function usersView() {
-        include '../public/assets/views/user/users-view.html';
+        include '../public/assets/views/user/users.html';
+        exit();
+    }
+
+    public function userDetailsView() {
+        include '../public/assets/views/user/userDetails.html';
         exit();
     }
 
