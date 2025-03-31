@@ -59,17 +59,17 @@ if ($uriArray[1] === 'api' && $uriArray[2] === 'users' && $_SERVER['REQUEST_METH
 //views
 
 
-if ($uri === '/users-add' && $_SERVER['REQUEST_METHOD'] === 'GET') {
+if ($uri === '/new-user' && $_SERVER['REQUEST_METHOD'] === 'GET') {
     $userController = new UserController();
     $userController->usersAddView();
 }
 
-if ($uriArray[1] === 'users-update' && $_SERVER['REQUEST_METHOD'] === 'GET') {
+if ($uriArray[1] === 'users' && $_SERVER['REQUEST_METHOD'] === 'GET') {
     $userController = new UserController();
     $userController->usersUpdateView();
 }
 
-if ($uriArray[1] === 'users-delete' && $_SERVER['REQUEST_METHOD'] === 'GET') {
+if ($uriArray[1] === 'delete-user' && $_SERVER['REQUEST_METHOD'] === 'GET') {
     $userController = new UserController();
     $userController->usersDeleteView();
 }
