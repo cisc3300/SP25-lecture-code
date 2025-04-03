@@ -41,8 +41,9 @@
         <script>
 
             $(document).ready(function () {
-                const urlArry = window.location.pathname.split("/")
-                const id = urlArry[2]
+                const urlArray = window.location.pathname.split("/")
+                console.log(window.location.pathname)
+                const id = urlArray[2]
                 $.ajax({
                     url: `http://localhost:8888/api/users/${id}`,
                     type: "GET",

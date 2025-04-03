@@ -27,6 +27,11 @@ class User extends Model {
 
     public function saveUser($inputData){
         $query = "insert into users (firstName, lastName, email) values (:firstName, :lastName, :email);";
+        //[
+        //                'firstName' => $userData['firstName'],
+        //                'lastName' => $userData['lastName'],
+        //                'email' => $userData['email'],
+        //            ]
         return $this->query($query, $inputData);
     }
 
