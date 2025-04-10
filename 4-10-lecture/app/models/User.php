@@ -36,6 +36,7 @@ class User extends Model {
             return false;                                        // Return false
         }
 
+        //uses the bcrypt algorithm
         $authenticated = password_verify($inputData['password'], $member[0]['password']); // Passwords match?
         return ($authenticated ? $member[0] : false);
     }
